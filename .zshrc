@@ -102,9 +102,29 @@ source $ZSH/oh-my-zsh.sh
 alias wd="cd ${HOME}/Documents/Projects/"
 alias ll="ls -lha"
 
+alias hgrep="history | grep"
+
+alias hl="history | less"
+
 # added by Snowflake SnowSQL installer v1.2
 alias snowsql="/Applications/SnowSQL.app/Contents/MacOS/snowsql"
 
 if [ -f ~/.zshrc_private ]; then
   . ~/.zshrc_private
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/dokeeffe/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/dokeeffe/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/dokeeffe/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/dokeeffe/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
